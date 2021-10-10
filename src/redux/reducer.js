@@ -11,10 +11,6 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    // case ACTION_TYPES.REQUEST_COINS:
-    //   return {
-    //     ...state,
-    //   };
     case ACTION_TYPES.SET_PRICE:
       return {
         ...state,
