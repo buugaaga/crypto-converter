@@ -1,6 +1,8 @@
+import './Error.scss'
+
 export const Error = () => {
   return (
-    <div style={{ color: 'red' }}>
+    <div className="error">
       <h5>
         В данный момент информация по паре не известна, попробуйте посмотреть
         позже

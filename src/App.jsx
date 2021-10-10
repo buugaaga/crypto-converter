@@ -6,6 +6,7 @@ import { Price } from './components/Price'
 import { CURRENCIES } from './constants'
 import { fetchCoins } from './redux/actionCreators'
 import { Error } from './components/Error'
+import './App.scss'
 
 export const App = () => {
   const { cur1, cur2, error } = useSelector((store) => store)
@@ -30,17 +31,10 @@ export const App = () => {
   }
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <div className="main-container">
       <h3>Конвертер</h3>
       {error ? <Error /> : <Price />}
-      <div style={{ display: 'flex' }}>
+      <div className="select-container">
         <DropDown changeCurrency={change1Currency} currency={cur1} />
         <DropDown changeCurrency={change2Currency} currency={cur2} />
       </div>
